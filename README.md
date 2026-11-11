@@ -1,7 +1,7 @@
-# PS5 13.60 — booting the Orbis kernel under QEMU
+# PS5 13.60 — booting the Prospero kernel under QEMU
 
-Research notes, tooling and QEMU device models for running the PS5 system
-software kernel outside of a console. Everything here is derived from a
+Research notes, tooling and QEMU device models for running the PS5 Prospero
+system software kernel outside of a console. Everything here is derived from a
 **live kernel memory dump** — no decrypted firmware, no keys, no Sony
 binaries are redistributed.
 
@@ -183,6 +183,21 @@ useful than a clean story.
 - Not an emulator that runs games. It boots a kernel.
 
 ## Scope and intent
+
+Naming, since it trips people up (including an earlier revision of this
+document):
+
+| Name | What it is | Evidence in the 13.60 dump |
+|---|---|---|
+| **Prospero** | the PS5 platform — SDK, executables, application category | `Prospero SDK version`, `Prospero Native Game`, `prospero-llvm-readelf.exe` |
+| **Orbis** | PS4 generation codename; the `orbis_*` filenames in the kernel are inherited PS4/FreeBSD legacy | `orbis_mdbg.c`, `orbis_pmc.c`, `orbis_vnode`, `Orbis Sflash` |
+| **Oberon** | the APU / SoC | `" Oberon PSP"` — the PCI probe description |
+
+Referring to a PS5 kernel as "Orbis" is easy to do because the internal
+file names say so, but the platform is Prospero and that is what people
+in the field say. Using the mixed-up name in a title is the fastest way
+to look like an outsider, so it is corrected here rather than quietly
+edited away.
 
 The point is to make PS5 system software research possible on hardware
 people actually own, using a memory image that is already public. If you

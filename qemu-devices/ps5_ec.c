@@ -1,7 +1,7 @@
 /*
  * ps5_ec.c — ACPI Embedded Controller pour l'émulation PS5
  *
- * Le noyau Orbis (FreeBSD 11) attache son pilote acpi_ec via ACPI.
+ * Le noyau Prospero (FreeBSD 11) attache son pilote acpi_ec via ACPI.
  * QEMU x86 n'expose pas de EC : on en fournit un minimal mais conforme
  * au protocole ACPI EC (ports 0x62 data / 0x66 status+command).
  *

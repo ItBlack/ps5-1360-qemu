@@ -1,7 +1,7 @@
 /*
  * ps5_otpctrl.c — controleur OTP pour l'emulation PS5
  *
- * Le noyau Orbis expose un device "sbl/otpctrl" (code a
+ * Le noyau Prospero expose un device "sbl/otpctrl" (code a
  * 0xffffffff9ee44200..0xffffffff9ee44767 dans le dump 13.60) et ses
  * fonctions otpctrl_init / otpctrl_ioctl_nolock. Sans lui, la chaine
  * sbl_sm_service echoue et rien de ce qui depend des cles ne demarre.
