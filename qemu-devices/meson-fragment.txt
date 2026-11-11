@@ -1,0 +1,3 @@
+# add to hw/misc/meson.build
+system_ss.add(files('ps5_icc.c'))
+system_ss.add(files('ps5_ec.c'))
